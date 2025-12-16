@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About My Life</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0f17, #1a1a2e);
+      color: #e6e6f0;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #1e1e2f;
+      border-bottom: 1px solid #2d2d44;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav a {
+      margin-left: 1.5rem;
+      color: #cbd5f7;
+      text-decoration: none;
+      opacity: 0.8;
+    }
+
+    .nav a:hover { opacity: 1; }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section {
+      padding: 3rem 0;
+      border-bottom: 1px solid #1f2937;
+    }
+
+    h1, h2 {
+      color: #f1f5f9;
+      margin-bottom: 1rem;
+    }
+
+    p { max-width: 60rem; }
+
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 1.5rem;
+      border-radius: 1.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 1.2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      backdrop-filter: blur(12px);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    footer {
+      padding: 1rem;
+      text-align: center;
+      background: #020617;
+      border-top: 1px solid #1f2937;
+      color: #64748b;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <section style="text-align:center; padding:2rem 0;">
+    <img src="profile.png" alt="Profile Photo" style="width:220px; height:auto; border-radius:50%; border:3px solid #334155;" />
+  </section>
+  <header>
+    <div class="nav">
+      <div class="logo">MY LIFE</div>
+      <div class="nav-links">
+        <a href="#life">Life</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#passion">Passion</a>
+        <a href="#dreams">Dreams</a>
+        <a href="#goals">Goals</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="life">
+      <h2>My Life</h2>
+      <div class="card">
+        <p>
+          I am Aldrich Kyle P. Alvinez, a culinary graduating student at Lyceum of the Philippines University - Manila. My journey in culinary school has shaped my skills, discipline, and passion for cooking. Throughout the years, I have learned the importance of creativity, patience, and dedication in the kitchen. My life revolves around continuous self‑improvement, meaningful experiences, and the people who support me along the way.
+      </div>
+    </section>
+
+    <section id="hobbies">
+      <h2>My Hobbies</h2>
+      <img src="hobbies.jpg" alt="Hobbies Image" style="width:100%; max-width:650px; border-radius:1rem; margin:1rem 0;" />
+      <div class="grid grid-3">
+        <div class="card"><h3>Playing Online Games</h3><p>I enjoy playing online games during my free time. It helps me relax, strategize, and connect with others.</p></div>
+        <div class="card"><h3>Reading Online Novels</h3><p>I love immersing myself in online novels, discovering new worlds, stories, and characters.</p></div>
+        <div class="card"><h3>Spending Time With Friends & Family</h3><p>Making time with the people I care about keeps me grounded and reminds me of what truly matters.</p></div>
+      </div>
+    </section>
+
+    <section id="passion">
+      <h2>My Passion</h2>
+      <img src="passion.jpg" alt="Cooking Passion Image" style="width:100%; max-width:650px; border-radius:1rem; margin:1rem 0;" />
+      <div class="card">
+        <p>
+          My passion is cooking—discovering flavors, creating new dishes, and continuously seeking improvement. Every experience in the kitchen motivates me to learn more, refine my skills, and grow as a future culinary professional.
+      </div>
+    </section>
+
+    <section id="dreams">
+      <h2>My Dreams</h2>
+      <img src="dreams.jpg" alt="Dream Travel Image" style="width:100%; max-width:650px; border-radius:1rem; margin:1rem 0;" />
+      <div class="card">
+        <p>
+          I dream of traveling the world and learning different cuisines. Experiencing diverse cultures and flavors inspires me, and I hope to bring these inspirations into my cooking journey.
+      </div>
+    </section>
+
+    <section id="goals">
+      <h2>My Goals</h2>
+      <img src="goals.jpg" alt="Goals Image" style="width:100%; max-width:650px; border-radius:1rem; margin:1rem 0;" />
+      <div class="card">
+        <p>
+          My goal is to have more than enough money to fulfill my dreams. Through hard work, dedication, and constant learning, I strive to build a future where I can support myself, my passions, and the life I envision.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> My Life Website
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
